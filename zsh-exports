@@ -1,13 +1,33 @@
 #!/bin/sh
+
 HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
-
-# export PATH="$HOME/.local/bin":$PATH  # already exists
+# export PATH="$HOME/.local/bin":$PATH
 # export MANPAGER='nvim +Man!'
 # export MANWIDTH=999
 
-# Completion #
-eval "$(fnm env)"
+
 eval "$(zoxide init zsh)"
-# eval "`pip completion --zsh`"
+
+# i know what i want
+# don't use a lot of completion because it slow down your machine
+# eval "`pip completion --zsh`"           
+
+
+# Adding to PATH
+function add_to_path {
+  if [[ ":$PATH:" != *":$1:"* ]]; then
+    export PATH=$PATH:$1
+  fi
+}
+#  adding /home/khabir/.local/bin to path.
+add_to_path /home/khabir/.local/bin
+#  for creating executable files in /home/khabir/bin
+add_to_path /home/khabir/bin
+# adding AppImages dir to PATH
+add_to_path ~/AppImages
+# bat, zathura, sxiv
+add_to_path /usr/bin/bat:/usr/bin/sxiv:/usr/bin/zathura
+# lua
+add_to_path /usr/bin/lua

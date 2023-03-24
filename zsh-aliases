@@ -4,7 +4,6 @@ alias j='z'
 alias f='zi'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
-
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -27,3 +26,28 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
 # systemd
 alias list_systemctl="systemctl list-unit-files --state=enabled"
+
+
+
+
+# brave-browser
+alias brave='brave-browser'
+
+# alias for cisco linux cource
+alias lnx='brave-browser https://www.netacad.com/portal/learning'
+
+# suspend or sleep the computer
+alias go-sleep='systemctl suspend -i'
+
+# alias for obsidian
+alias obsidian='Obsidian-1.1.9.AppImage &'
+
+#	to go to rc.conf dir
+alias rgc="cd ~/.config/ranger"
+
+#	for neovim 
+alias nv='nvim'
+
+#	lua
+alias lua="lua5.1"
+
