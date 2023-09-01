@@ -1,8 +1,44 @@
 #!/bin/sh
+
+## pacman 
+alias i='yay -S'
+alias u='yay -Syu'
+alias r='yay -Rns'   # remove a package and its dependencies which are not required by any other installed package:
+alias q='yay -Ss'
+alias c='yay -Yc'
+
+
+# app images
+alias obsidian="~/dows/Obsidian-1.2.8.AppImage"
+
+alias p="sudo pacman"
 alias ls='ls --color=auto'
 alias j='z'
 alias f='zi'
+alias vi='vim'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+
+# ls 
+alias ll="ls -l -h"
+alias la "ls -l -h -a"
+
+# config 
+alias nvimrc='nvim ~/.config/nvim/'
+alias zshrc='nvim ~/.config/zsh/'
+alias rangerrc='nvim ~/.config/ranger/rc.conf'
+alias lfrc='nvim ~/.config/lf/lfrc'
+alias dwmfrc='cd ~/.config/dwm-flexipatch/'
+alias dwmrc='cd ~/.config/dwm/'
+alias dmrc='cd ~/.config/dmenu/'
+alias zathurarc='nvim ~/.config/zathura/zathurarc'
+alias alacrittyrc='nvim ~/.config/alacritty/alacritty.yml'
+alias slrc='cd ~/.config/slstatus/ && nvim .'
+alias sxrc='nvim ~/.config/sxhkd/sxhkdrc'
+alias aliasrc='nvim ~/.config/zsh/zsh-aliases'
+alias sxivrc="nvim ~/.config/sxiv/exec/key-handler"
+alias picomrc="nvim ~/.config/picom.conf"
+## scripts
+# alias sc='cd ~/.local/scripts'   # use sc as a fzf
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -12,7 +48,7 @@ alias fgrep='fgrep --color=auto'
 # confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
-alias rm='rm -i'
+# alias rm='rm -i'
 
 # easier to read disk
 alias df='df -h'                          # human-readable sizes
@@ -27,27 +63,21 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 # systemd
 alias list_systemctl="systemctl list-unit-files --state=enabled"
 
-
-
-
 # brave-browser
-alias brave='brave-browser'
+alias brave='brave-beta'
 
-# alias for cisco linux cource
-alias lnx='brave-browser https://www.netacad.com/portal/learning'
+# learning 
+alias lnx='$BROWSER https://www.netacad.com/portal/learning'
+alias nt='$BROWSER "https://skillsforall.com/launch?id=f393c38f-b410-4d2b-8275-70e144273519&tab=curriculum&view=79932ede-7bba-57ef-a312-ac4d72c37c84"'
 
 # suspend or sleep the computer
 alias go-sleep='systemctl suspend -i'
 
-# alias for obsidian
-alias obsidian='Obsidian-1.1.9.AppImage &'
-
-#	to go to rc.conf dir
-alias rgc="cd ~/.config/ranger"
-
 #	for neovim 
 alias nv='nvim'
 
-#	lua
-alias lua="lua5.1"
+# convert from anything to pdf
+alias topdf="soffice --headless --convert-to pdf "
 
+# for shutdown now
+alias sn="shutdown now"
