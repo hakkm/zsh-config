@@ -27,11 +27,9 @@ autoload -Uz colors && colors
 
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
-# #
 # # Normal files to source
 zsh_source_file "zsh-exports"
 zsh_source_file "zsh-vim-mode"
-# zsh_source_file "zsh-aliases"
 zsh_source_file "zsh-prompt"
 zsh_source_file "zsh-keybindings"
 zsh_source_file "zsh-commands"
