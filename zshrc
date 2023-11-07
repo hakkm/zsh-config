@@ -65,14 +65,6 @@ bindkey '^[[B' history-substring-search-down
 # zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
-
-
-# FZF
-# Todo: theses files do not exists
-# source /usr/share/fzf/key-bindings.zsh
-# source /usr/share/fzf/completion.zsh
-# exkort FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
