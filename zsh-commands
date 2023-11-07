@@ -20,3 +20,14 @@ find /etc -type f | grep -v -e ".git" -e "Makefile" -e "Brave" -e "Virtual" | fz
 sff() {
 find $@ -type f | grep -v -e ".git" -e "Makefile" -e "Brave" -e "Virtual" | fzf --preview "bat --color=always --style=plain {}" | xargs -r nvim
 }
+
+# show 256 colors
+color() {
+  x=`tput op`;
+  y=`printf %76s`;
+  for i in {0..256};do
+    o=00$i
+    echo -e ${o:${#o}-3:3} `tput setaf $i
+    tput setab $i`${y// /=}$x
+  done
+}
