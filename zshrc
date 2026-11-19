@@ -40,12 +40,24 @@ zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "zsh-users/zsh-history-substring-search"
 zsh_add_plugin "akash329d/zsh-alias-finder"
 zsh_add_plugin "sei40kr/zsh-fast-alias-tips"
+# zsh_add_plugin "jessarcher/zsh-artisan"
+# ARTISAN_OPEN_ON_MAKE_EDITOR=vim
 # zsh_add_completion "srijanshetty/zsh-pip-completion" false
 # zsh_add_completion "zsh-users/zsh-completions" false
 # zsh_add_completion "esc/conda-zsh-completion" false
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
 
+################
+# Artisan      # 
+################
+# ARTISAN=/home/khabir/.config/zsh/plugins/zsh-artisan
+# if [ -d "$ARTISAN" ]; then
+#   # echo "$ARTISAN exist"
+# else
+#   git clone https://github.com/jessarcher/zsh-artisan.git $ARTISAN
+#   sed -i 's/plugins=(git)/plugins=(git composer artisan)/g' /home/vagrant/.zshrc
+# fi
 ################
 # Key-bindings #
 ################

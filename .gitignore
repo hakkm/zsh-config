@@ -1,5 +1,15 @@
+plugins/*
 plugins/
+plugins/zsh-autosuggestions
+plugins/zsh-completions
+plugins/zsh-syntax-highlighting
+/plugin/*
 
 # files
 .zcompdump
 .zsh_history
+zsh-aliases
+zsh-commands
+plugins/zsh-fast-alias-tips
+.zsh_history
+secret.zsh
